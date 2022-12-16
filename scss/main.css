@@ -24,8 +24,8 @@ body {
   -ms-grid-rows: 1fr auto;
       grid-template-rows: 1fr auto;
   font-family: "Outfit", sans-serif;
-  background: #0d192b;
-  color: white;
+  background: white;
+  color: black;
 }
 
 img {
@@ -42,7 +42,7 @@ a {
 }
 
 .card {
-  background: #14253d;
+  background: white;
   max-width: 18em;
   overflow: hidden;
   padding: 1.2em;
@@ -97,7 +97,7 @@ a {
 }
 
 .card > .details > .nft-number > a {
-  color: white;
+  color: black;
 }
 
 .card > .details > .nft-number > a:hover {
@@ -117,46 +117,65 @@ a {
 .card > .details > .cost::before {
   vertical-align: middle;
   content: url(../images/icon-ethereum.svg);
-  margin-right: 0.2em;
+  margin-right: 0.5em;
 }
 
-.card > .details > .duration {
-  font-weight: 300;
-  color: #8bacda;
+.card > .details > .cost > a {
+  color: #00fff7;
+  text-decoration: none;
 }
 
-.card > .details > .duration::before {
-  vertical-align: middle;
-  content: url(../images/icon-clock.svg);
-  margin-right: 0.2em;
-}
-
-.card > .creator-section {
-  border-top: 2px solid #2f415b;
-}
-
-.card > .creator-section > .picture {
-  width: 2em;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border: 1px solid white;
-  border-radius: 50%;
-}
-
-.card > .creator-section > p {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  color: #8bacda;
-}
-
-.card > .creator-section > p span {
-  color: white;
-  font-weight: 300;
-}
-
-.card > .creator-section > p span:hover {
+.card > .details > .cost > a:hover {
   color: #00fff7;
 }
-/*# sourceMappingURL=main.css.map */
+
+.card > .details > .cost::after {
+  content: "";
+  height: 1px;
+  background: #00fff7;
+  display: block;
+  width: 80%;
+  margin: 0.5em auto;
+}
+
+.card > .details > .cost > .amount {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 1em;
+}
+
+@media (min-width: 30em) {
+  .card {
+    max-width: 20em;
+  }
+}
+
+@media (min-width: 40em) {
+  .card {
+    max-width: 22em;
+  }
+}
+
+@media (min-width: 50em) {
+  .card {
+    max-width: 24em;
+  }
+}
+
+@media (min-width: 60em) {
+  .card {
+    max-width: 26em;
+  }
+}
+
+@media (min-width: 70em) {
+  .card {
+    max-width: 28em;
+  }
+}
+
+@media (min-width: 80em) {
+  .card {
+    max-width: 30em;
+  }
+}
